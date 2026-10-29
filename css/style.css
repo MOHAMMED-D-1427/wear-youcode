@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* ======================= Cards */
+.card{
+    box-shadow: 0 0 3px #434040;
+}
+

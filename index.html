@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/output.css">
+    <script src="https://kit.fontawesome.com/a034b0a078.js" crossorigin="anonymous"></script>
+
+    <title>Auchan</title>
+</head>
+<body class="bg-black text-white">
+    <header class="w-full px-3 pt-4 bg-gray-950 ">
+        <div class="w-11/12 m-auto flex justify-between items-center">
+
+            <a href="#">
+                <img src="./assets/logo.png" class="w-39" alt="Logo">
+            </a>
+            
+            <div class="relative">
+                <input type="text" placeholder="Rechercher un produit..." id="" 
+                class="border-2 border-gray-800 p-2 w-112.5 ">
+                <i class="fas fa-search absolute text-2xl right-2.5 top-2.5" ></i>
+            </div>
+            
+            <div id="panier" class="border-2 border-gray-800 p-2.5 rounded hover:bg-gray-600 cursor-pointer">
+                <i class="fas fa-cart-arrow-down"></i>
+                <span class="prix">0</span>DH
+            </div>
+        </div>
+    </header>
+
+    <main class="w-11/12 m-auto">
+        <!-- <div class="categories">
+            <p class="text-2xl font-bold">Catégories</p>
+            <div>
+
+            </div>
+        </div> -->
+        <!-- ======================================= -->
+         <div class="filter-trier flex justify-between items-center mt-5">
+            <div class="border-2 border-gray-800 px-2 py-1 h-fit  rounded">
+                Filter</div>
+
+            <div class="">
+                <label for="trier" class="text-gray-600">Trier par</label><br>
+                <select name="trier" id="trier" class="border-2 border-gray-800 px-2 py-1 h-fit rounded bg-black text-white">
+                    <option value="">Prix croissant</option>
+                    <option value="">Prix décroissant</option>
+                    <option value="">Marques de A à Z</option>
+                    <option value="">Marques de Z à A</option>
+                </select>
+            </div>
+        </div>
+        <!-- ======================================= -->
+        
+        <hr class="text-gray-800 my-7">
+        <section id="cards" class="w-11/12 m-auto flex flex-wrap flex-row gap-2.5 justify-center">
+
+            <div class="card rounded-xl overflow-hidden w-fit cursor-pointer hover:opacity-80">
+                <img class="w-50" src="https://media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/b243d9d5-44ae-4fad-a3f3-7e4b4ed2e3ea_medium.webp" 
+                alt="T-shirt Noir Coton">
+
+                <div class="p-1">
+                    <div class="nom">T-shirt Noir Coton</div>
+                    <div class="text-gray-700">M &nbsp;&nbsp;&nbsp; L &nbsp;&nbsp;&nbsp; XL</div>
+                    <div class="text-green-700">
+                        <div class="prix inline">40</div> DH
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </section>
+    </main>
+
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
+

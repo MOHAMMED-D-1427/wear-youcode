@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "nom": "T-shirt Blanc Basique",
+    "catégorie": "T-shirts",
+    "prix": 15.99,
+    "image": "https://static.vecteezy.com/system/resources/previews/055/802/204/non_2x/isolated-white-t-shirt-on-clean-background-product-photography-minimalistic-style-studio-setting-flat-lay-view-for-e-commerce-free-png.png",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 2,
+    "nom": "T-shirt Noir Coton",
+    "catégorie": "T-shirts",
+    "prix": 17.99,
+    "image": "https://media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/b243d9d5-44ae-4fad-a3f3-7e4b4ed2e3ea_medium.webp",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 3,
+    "nom": "T-shirt Col V Gris",
+    "catégorie": "T-shirts",
+    "prix": 19.99,
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/073/271/521/small/a-dark-grey-v-neck-t-shirt-hangs-on-a-wooden-hanger-against-a-textured-light-grey-wall-photo.jpg",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 4,
+    "nom": "T-shirt Rayé Marine",
+    "catégorie": "T-shirts",
+    "prix": 22.5,
+    "image": "https://media.masonry.so/t/blog/ai-clothing-product-photography/source-flatlay.png?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 5,
+    "nom": "T-shirt Imprimé Vintage",
+    "catégorie": "T-shirts",
+    "prix": 24.99,
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 6,
+    "nom": "Polo Classique Bleu",
+    "catégorie": "Polos",
+    "prix": 29.99,
+    "image": "https://images.unsplash.com/photo-1625910513418-7c4712aa7a62?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 7,
+    "nom": "Polo Piqué Blanc",
+    "catégorie": "Polos",
+    "prix": 32.0,
+    "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 8,
+    "nom": "Polo Sport Rouge",
+    "catégorie": "Polos",
+    "prix": 27.5,
+    "image": "https://images.unsplash.com/photo-1626497764746-6dc36546b388?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 9,
+    "nom": "Chemise Oxford Blanche",
+    "catégorie": "Chemises",
+    "prix": 44.99,
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 10,
+    "nom": "Chemise en Lin Beige",
+    "catégorie": "Chemises",
+    "prix": 49.99,
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 11,
+    "nom": "Chemise à Carreaux",
+    "catégorie": "Chemises",
+    "prix": 39.99,
+    "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 12,
+    "nom": "Chemise Denim",
+    "catégorie": "Chemises",
+    "prix": 47.0,
+    "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 13,
+    "nom": "Jean Slim Bleu",
+    "catégorie": "Pantalons",
+    "prix": 59.99,
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 14,
+    "nom": "Jean Droit Noir",
+    "catégorie": "Pantalons",
+    "prix": 54.99,
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 15,
+    "nom": "Chino Beige",
+    "catégorie": "Pantalons",
+    "prix": 49.5,
+    "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 16,
+    "nom": "Pantalon Cargo Kaki",
+    "catégorie": "Pantalons",
+    "prix": 52.0,
+    "image": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 17,
+    "nom": "Pantalon de Costume Gris",
+    "catégorie": "Pantalons",
+    "prix": 69.99,
+    "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 18,
+    "nom": "Short en Jean",
+    "catégorie": "Shorts",
+    "prix": 34.99,
+    "image": "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 19,
+    "nom": "Short de Sport Noir",
+    "catégorie": "Shorts",
+    "prix": 24.99,
+    "image": "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 20,
+    "nom": "Bermuda Chino Marine",
+    "catégorie": "Shorts",
+    "prix": 36.5,
+    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 21,
+    "nom": "Sweat à Capuche Gris",
+    "catégorie": "Sweats",
+    "prix": 49.99,
+    "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 22,
+    "nom": "Sweat à Capuche Noir",
+    "catégorie": "Sweats",
+    "prix": 52.99,
+    "image": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 23,
+    "nom": "Sweat Col Rond Bordeaux",
+    "catégorie": "Sweats",
+    "prix": 42.0,
+    "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 24,
+    "nom": "Sweat Zippé Bleu",
+    "catégorie": "Sweats",
+    "prix": 54.5,
+    "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 25,
+    "nom": "Pull en Laine Gris",
+    "catégorie": "Pulls",
+    "prix": 64.99,
+    "image": "https://images.unsplash.com/photo-1620799139834-6b8f8416be61?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 26,
+    "nom": "Pull Col Roulé Noir",
+    "catégorie": "Pulls",
+    "prix": 59.0,
+    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 27,
+    "nom": "Pull Torsadé Écru",
+    "catégorie": "Pulls",
+    "prix": 69.5,
+    "image": "https://images.unsplash.com/photo-1614975054944-77414f1b53e7?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 28,
+    "nom": "Gilet Cardigan Marine",
+    "catégorie": "Pulls",
+    "prix": 57.99,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 29,
+    "nom": "Veste en Jean",
+    "catégorie": "Vestes",
+    "prix": 79.99,
+    "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 30,
+    "nom": "Veste Bomber Verte",
+    "catégorie": "Vestes",
+    "prix": 84.99,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 31,
+    "nom": "Blouson en Cuir Noir",
+    "catégorie": "Vestes",
+    "prix": 189.0,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 32,
+    "nom": "Veste Légère Coupe-Vent",
+    "catégorie": "Vestes",
+    "prix": 64.5,
+    "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 33,
+    "nom": "Manteau d'Hiver Noir",
+    "catégorie": "Manteaux",
+    "prix": 129.99,
+    "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 34,
+    "nom": "Parka Kaki",
+    "catégorie": "Manteaux",
+    "prix": 119.0,
+    "image": "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 35,
+    "nom": "Doudoune Bleu Marine",
+    "catégorie": "Manteaux",
+    "prix": 139.5,
+    "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 36,
+    "nom": "Trench Beige",
+    "catégorie": "Manteaux",
+    "prix": 149.99,
+    "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 37,
+    "nom": "Survêtement Noir",
+    "catégorie": "Sport",
+    "prix": 64.99,
+    "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 38,
+    "nom": "Legging de Sport",
+    "catégorie": "Sport",
+    "prix": 29.99,
+    "image": "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 39,
+    "nom": "Maillot de Running",
+    "catégorie": "Sport",
+    "prix": 26.5,
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+    "tailles": ["M", "L", "XL"]
+  },
+  {
+    "id": 40,
+    "nom": "Veste de Sport Zippée",
+    "catégorie": "Sport",
+    "prix": 44.99,
+    "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+    "tailles": ["M", "L", "XL"]
+  }
+]
