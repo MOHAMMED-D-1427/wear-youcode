@@ -5,6 +5,7 @@ import { showProducts } from "./ui.js";
 
 
 getProducts()
+
 showProducts()
 
 gridOrList()
