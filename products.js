@@ -5,12 +5,8 @@ let images = document.querySelectorAll(".p-image");
 let cards = cardsContainer.getElementsByClassName("card");
 let productInfo = cardsContainer.getElementsByClassName("p-info-container");
 
-
-export function gridOrList(){
-    layout.addEventListener("click", (e)=>{
-            e.target.closest(".grid-list-layout").classList.toggle("fa-table-cells");
-            e.target.closest(".grid-list-layout").classList.toggle("fa-list");
-            if(cardsContainer.classList.contains("grid")){
+export function changeCardsLayout(){
+    if(cardsContainer.classList.contains("grid")){
                 cardsContainer.classList.remove("grid", "md:grid-cols-3", "sm:grid-cols-2");
                 cardsContainer.classList.add("flex","flex-col");
                 for(i of images){
@@ -37,6 +33,14 @@ export function gridOrList(){
                     p.classList.add("flex-col")
                 }
             }
+}
+
+export function gridOrList(){
+    layout.addEventListener("click", (e)=>{
+            e.target.closest(".grid-list-layout").classList.toggle("fa-list");
+            e.target.closest(".grid-list-layout").classList.toggle("fa-table-cells");
+
+            changeCardsLayout()
         console.log("Clicked")
     });
 }
