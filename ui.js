@@ -15,13 +15,15 @@ export function showProducts(){
                 <img class="p-image w-50 h-50 object-cover" src="${p.image}" 
                 alt="T-shirt Noir Coton">
 
-                <div class="p-1">
-                    <div class="nom">${p.nom}</div>
-                    <div class="text-gray-700">M &nbsp;&nbsp;&nbsp; L &nbsp;&nbsp;&nbsp; XL</div>
-                    <div class="text-green-700">
-                        <div class="prix inline">${p.prix}</div> DH
+                <div class="p-info-container  p-1 flex flex-col">
+                    <div>
+                        <div class="nom">${p.nom}</div>
+                        <div class="text-gray-700">M &nbsp;&nbsp;&nbsp; L &nbsp;&nbsp;&nbsp; XL</div>
+                        <div class="text-green-700">
+                            <div class="prix inline">${p.prix}</div> DH
+                        </div>
                     </div>
-
+                    <button class="bg-green-700 px-2 py-1 my-1.5 rounded cursor-pointer hover:bg-green-400 ">Ajouter +</ajouter>
                 </div>
             `
             cards.append(div);
