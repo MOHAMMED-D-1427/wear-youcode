@@ -4,6 +4,8 @@ let layout = document.querySelector(".layout-container")
 const cards = document.getElementById("cards")
 const pagination = document.getElementById("pagination");
 const search = document.getElementById("search")
+const trier = document.getElementById("trier");
+
 
 const data = await getProducts();
 let list = data;
@@ -12,12 +14,29 @@ const perPage = 8;
 let currentPage = 1;
 const tototalPages = Math.ceil(list.length / perPage);
 
-console.log(pagination)
+
 
 search.addEventListener('input', (e)=>{
     list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
     showProducts()
 });
+
+trier.addEventListener("click", (e)=>{
+    let orderType = e.target.value;
+    if(orderType == 'asc'){
+        list = list.sort((a, b)=> a.prix - b.prix);
+    }
+    if(orderType == 'desc'){
+        list = list.sort((a, b)=> b.prix - a.prix);
+    }
+    if(orderType == 'a-to-z'){
+        list = list.sort((a, b)=> a.nom.localeCompare(b.nom));
+    }
+    if(orderType == 'z-to-a'){
+        list = list.sort((a, b)=> b.nom.localeCompare(a.nom));
+    }
+    showProducts();
+})
 
 export function showProducts(){
     cards.innerHTML = "" 
@@ -26,22 +45,21 @@ export function showProducts(){
     const pageItems = list.slice(start, start + perPage);
 
     // -----------------------------
-    // layout.classList.add("fa-list");
     layout.querySelector(".grid-list-layout").classList.add("fa-list")
     layout.querySelector(".grid-list-layout").classList.remove("fa-table-cells")
-    // console.log(layout.querySelector(".grid-list-layout"))
-    // console.log(layout)
     cards.classList.add("grid","md:grid-cols-3","sm:grid-cols-2", "lg:grid-cols-4", "xl:grid-cols-5")
-    console.log(cards)
+    // -----------------------------
+    
+    // console.log(cards)
     pageItems.forEach(p =>{
 
         let div = document.createElement("div");
         div.className = "card rounded-xl overflow-hidden w-50 cursor-pointer hover:opacity-80";
         div.innerHTML = `
                 <img class="p-image w-50 h-50 object-cover" src="${p.image}" 
-                alt="T-shirt Noir Coton">
+                alt="${p.nom}">
 
-                <div class="p-info-container  p-1 flex flex-col">
+                <div class="p-info-container p-1 flex flex-col ">
                     <div>
                         <div class="nom">${p.nom}</div>
                         <div class="text-gray-700">M &nbsp;&nbsp;&nbsp; L &nbsp;&nbsp;&nbsp; XL</div>

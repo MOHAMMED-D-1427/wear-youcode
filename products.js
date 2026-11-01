@@ -34,7 +34,6 @@ export function changeCardsLayout(){
                 }
             }
 }
-
 export function gridOrList(){
     layout.addEventListener("click", (e)=>{
             e.target.closest(".grid-list-layout").classList.toggle("fa-list");
@@ -45,9 +44,3 @@ export function gridOrList(){
     });
 }
 
-// image:          object-fit: contain;
-// card:           display: flex; width: stretch; height: 84px;
-// cards section:  display: flex; flex-direction: column;
-// product info: flex-direction: row;
-    // width: stretch;
-    // justify-content: space-between;
