@@ -419,22 +419,11 @@
     .hover\:bg-green-400:hover {
       background-color: var(--color-green-400);
     }
-    .hover\:bg-green-700:hover {
-      background-color: var(--color-green-700);
-    }
     .hover\:opacity-70:hover {
       opacity: 70%;
     }
     .hover\:opacity-80:hover {
       opacity: 80%;
-    }
-    .hover\:opacity-100:hover {
-      opacity: 100%;
-    }
-    .hover\:backdrop-brightness-75:hover {
-      --tw-backdrop-brightness: brightness(75%);
-      -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-      backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     }
   }
   .disabled\:opacity-40:disabled {
