@@ -3,20 +3,27 @@ import { getProducts } from "./api.js";
 let layout = document.querySelector(".layout-container")
 const cards = document.getElementById("cards")
 const pagination = document.getElementById("pagination");
+const search = document.getElementById("search")
 
 const data = await getProducts();
+let list = data;
 
 const perPage = 8;
 let currentPage = 1;
-const tototalPages = Math.ceil(data.length / perPage);
+const tototalPages = Math.ceil(list.length / perPage);
 
 console.log(pagination)
+
+search.addEventListener('input', (e)=>{
+    list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
+    showProducts()
+});
 
 export function showProducts(){
     cards.innerHTML = "" 
     // ---------------------------------
     const start = (currentPage - 1) * perPage;
-    const pageItems = data.slice(start, start + perPage);
+    const pageItems = list.slice(start, start + perPage);
 
     // -----------------------------
     // layout.classList.add("fa-list");
