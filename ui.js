@@ -17,34 +17,52 @@ const tototalPages = Math.ceil(list.length / perPage);
 
 
 // ===================================== Search
-search.addEventListener('input', (e)=>{
-    list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
-    showProducts()
-});
-// ===================================== Sort
-trier.addEventListener("click", (e)=>{
-    let orderType = e.target.value;
-    if(orderType == 'asc'){
-        list = list.sort((a, b)=> a.prix - b.prix);
-    }
-    if(orderType == 'desc'){
-        list = list.sort((a, b)=> b.prix - a.prix);
-    }
-    if(orderType == 'a-to-z'){
-        list = list.sort((a, b)=> a.nom.localeCompare(b.nom));
-    }
-    if(orderType == 'z-to-a'){
-        list = list.sort((a, b)=> b.nom.localeCompare(a.nom));
-    }
-    showProducts();
-})
-// ===================================== Filter
-filtrer.addEventListener("click", (e)=>{
-    list = data.filter(p => p.categorie == e.target.value);
-    console.log(list)
-    showProducts();
-})
+function searchProducts(){
 
+    search.addEventListener('input', (e)=>{
+        list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
+        showProducts()
+    });
+}
+searchProducts()
+// ===================================== Sort
+function sortProducts(){
+
+    trier.addEventListener("click", (e)=>{
+        let orderType = e.target.value;
+        if(orderType == 'asc'){
+            list = list.sort((a, b)=> a.prix - b.prix);
+        }
+        if(orderType == 'desc'){
+            list = list.sort((a, b)=> b.prix - a.prix);
+        }
+        if(orderType == 'a-to-z'){
+            list = list.sort((a, b)=> a.nom.localeCompare(b.nom));
+        }
+        if(orderType == 'z-to-a'){
+        list = list.sort((a, b)=> b.nom.localeCompare(a.nom));
+        }
+        showProducts();
+    })
+}
+sortProducts();
+
+// ===================================== Filter
+function filterByCategories(){
+    filtrer.addEventListener("click", (e)=>{
+        const cat = e.target.value;
+        if(cat == "Tout"){
+            list = data;
+            showProducts();
+            return ;
+        }
+        list = data.filter(p => p.categorie == e.target.value);
+        console.log(list)
+        showProducts();
+    })
+}
+
+filterByCategories();
 
 export function showProducts(){
     cards.innerHTML = "" 
