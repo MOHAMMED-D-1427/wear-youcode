@@ -5,6 +5,7 @@ const cards = document.getElementById("cards")
 const pagination = document.getElementById("pagination");
 const search = document.getElementById("search")
 const trier = document.getElementById("trier");
+const filtrer = document.getElementById("filtrer");
 
 
 const data = await getProducts();
@@ -15,12 +16,12 @@ let currentPage = 1;
 const tototalPages = Math.ceil(list.length / perPage);
 
 
-
+// ===================================== Search
 search.addEventListener('input', (e)=>{
     list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
     showProducts()
 });
-
+// ===================================== Sort
 trier.addEventListener("click", (e)=>{
     let orderType = e.target.value;
     if(orderType == 'asc'){
@@ -37,6 +38,13 @@ trier.addEventListener("click", (e)=>{
     }
     showProducts();
 })
+// ===================================== Filter
+filtrer.addEventListener("click", (e)=>{
+    list = data.filter(p => p.categorie == e.target.value);
+    console.log(list)
+    showProducts();
+})
+
 
 export function showProducts(){
     cards.innerHTML = "" 
@@ -82,7 +90,7 @@ function startPagination(){
     // -------------------
     pagination.innerHTML += `
         <button data-page="${currentPage - 1}" ${currentPage == 1 ? "disabled":""}
-            class="px-3 py-1 rounded text-white disabled:opacity-40">Prev</button>
+            class="px-3 py-1 rounded text-white disabled:opacity-40"><i class="fas fa-arrow-left"></i></button>
     `
 
     // ====> Page numbers
@@ -98,7 +106,7 @@ function startPagination(){
     // ---------------
      pagination.innerHTML += `
         <button data-page="${currentPage + 1}" ${currentPage == tototalPages ? "disabled":""} 
-            class="px-3 py-1 rounded text-white disabled:opacity-40">Next</button>
+            class="px-3 py-1 rounded text-white disabled:opacity-40"><i class="fas fa-arrow-right"></i></button>
     `
 }
 

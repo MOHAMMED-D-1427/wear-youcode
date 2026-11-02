@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nom": "T-shirt Blanc Basique",
-    "catégorie": "T-shirts",
+    "categorie": "T-shirts",
     "prix": 15.99,
     "image": "https://static.vecteezy.com/system/resources/previews/055/802/204/non_2x/isolated-white-t-shirt-on-clean-background-product-photography-minimalistic-style-studio-setting-flat-lay-view-for-e-commerce-free-png.png",
     "tailles": ["M", "L", "XL"]
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "nom": "T-shirt Noir Coton",
-    "catégorie": "T-shirts",
+    "categorie": "T-shirts",
     "prix": 17.99,
     "image": "https://media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/b243d9d5-44ae-4fad-a3f3-7e4b4ed2e3ea_medium.webp",
     "tailles": ["M", "L", "XL"]
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "nom": "T-shirt Col V Gris",
-    "catégorie": "T-shirts",
+    "categorie": "T-shirts",
     "prix": 19.99,
     "image": "https://static.vecteezy.com/system/resources/thumbnails/073/271/521/small/a-dark-grey-v-neck-t-shirt-hangs-on-a-wooden-hanger-against-a-textured-light-grey-wall-photo.jpg",
     "tailles": ["M", "L", "XL"]
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "nom": "T-shirt Rayé Marine",
-    "catégorie": "T-shirts",
+    "categorie": "T-shirts",
     "prix": 22.5,
     "image": "https://media.masonry.so/t/blog/ai-clothing-product-photography/source-flatlay.png?w=800",
     "tailles": ["M", "L", "XL"]
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "nom": "T-shirt Imprimé Vintage",
-    "catégorie": "T-shirts",
+    "categorie": "T-shirts",
     "prix": 24.99,
     "image": "https://ma.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/70/393976/1.jpg?5588",
     "tailles": ["M", "L", "XL"]
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "nom": "Polo Classique Bleu",
-    "catégorie": "Polos",
+    "categorie": "Polos",
     "prix": 29.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIYbJyMmzWGYoS9kD_EQ7zFrcgiv2cFLb7tNz_36SJ5A&s=10",
     "tailles": ["M", "L", "XL"]
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "nom": "Polo Piqué Blanc",
-    "catégorie": "Polos",
+    "categorie": "Polos",
     "prix": 32.0,
     "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
     "tailles": ["M", "L", "XL"]
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "nom": "Polo Sport Rouge",
-    "catégorie": "Polos",
+    "categorie": "Polos",
     "prix": 27.5,
     "image": "https://images.unsplash.com/photo-1626497764746-6dc36546b388?w=800",
     "tailles": ["M", "L", "XL"]
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "nom": "Chemise Oxford Blanche",
-    "catégorie": "Chemises",
+    "categorie": "Chemises",
     "prix": 44.99,
     "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800",
     "tailles": ["M", "L", "XL"]
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "nom": "Chemise en Lin Beige",
-    "catégorie": "Chemises",
+    "categorie": "Chemises",
     "prix": 49.99,
     "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800",
     "tailles": ["M", "L", "XL"]
@@ -82,7 +82,7 @@
   {
     "id": 11,
     "nom": "Chemise à Carreaux",
-    "catégorie": "Chemises",
+    "categorie": "Chemises",
     "prix": 39.99,
     "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800",
     "tailles": ["M", "L", "XL"]
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "nom": "Chemise Denim",
-    "catégorie": "Chemises",
+    "categorie": "Chemises",
     "prix": 47.0,
     "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800",
     "tailles": ["M", "L", "XL"]
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "nom": "Jean Slim Bleu",
-    "catégorie": "Pantalons",
+    "categorie": "Pantalons",
     "prix": 59.99,
     "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800",
     "tailles": ["M", "L", "XL"]
@@ -106,7 +106,7 @@
   {
     "id": 14,
     "nom": "Jean Droit Noir",
-    "catégorie": "Pantalons",
+    "categorie": "Pantalons",
     "prix": 54.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDV11cjY6oNpsrB1QFoA1XshlrdIg46X2Oww5iNvc8A&s=10",
     "tailles": ["M", "L", "XL"]
@@ -114,7 +114,7 @@
   {
     "id": 15,
     "nom": "Chino Beige",
-    "catégorie": "Pantalons",
+    "categorie": "Pantalons",
     "prix": 49.5,
     "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800",
     "tailles": ["M", "L", "XL"]
@@ -122,7 +122,7 @@
   {
     "id": 16,
     "nom": "Pantalon Cargo Kaki",
-    "catégorie": "Pantalons",
+    "categorie": "Pantalons",
     "prix": 52.0,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVk3KZeKqGuS_J1gPlKbOzG6vuf-kMVoLcZsV7jSpBxQ&s",
     "tailles": ["M", "L", "XL"]
@@ -130,7 +130,7 @@
   {
     "id": 17,
     "nom": "Pantalon de Costume Gris",
-    "catégorie": "Pantalons",
+    "categorie": "Pantalons",
     "prix": 69.99,
     "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800",
     "tailles": ["M", "L", "XL"]
@@ -138,7 +138,7 @@
   {
     "id": 18,
     "nom": "Short en Jean",
-    "catégorie": "Shorts",
+    "categorie": "Shorts",
     "prix": 34.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgn8LZgf_0mF4txN9Hjtt9DRrVQIA-NowetO69OGQXBw&s=10",
     "tailles": ["M", "L", "XL"]
@@ -146,7 +146,7 @@
   {
     "id": 19,
     "nom": "Short de Sport Noir",
-    "catégorie": "Shorts",
+    "categorie": "Shorts",
     "prix": 24.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVaDJlK_wwXPMaBmHA0NfiX6Z6A0c4swqUXdtgHniFWQ&s=10",
     "tailles": ["M", "L", "XL"]
@@ -154,7 +154,7 @@
   {
     "id": 20,
     "nom": "Bermuda Chino Marine",
-    "catégorie": "Shorts",
+    "categorie": "Shorts",
     "prix": 36.5,
     "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800",
     "tailles": ["M", "L", "XL"]
@@ -162,7 +162,7 @@
   {
     "id": 21,
     "nom": "Sweat à Capuche Gris",
-    "catégorie": "Sweats",
+    "categorie": "Sweats",
     "prix": 49.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABYVa-mahJYUU8UBR0bUbLc9MeKrc9jXRrC0gtFSYPg&s=10",
     "tailles": ["M", "L", "XL"]
@@ -170,7 +170,7 @@
   {
     "id": 22,
     "nom": "Sweat à Capuche Noir",
-    "catégorie": "Sweats",
+    "categorie": "Sweats",
     "prix": 52.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKUzfs3iWafvUpJfFd8mt5WwU5ZOLjhGZdjpksB_gug&s=10",
     "tailles": ["M", "L", "XL"]
@@ -178,7 +178,7 @@
   {
     "id": 23,
     "nom": "Sweat Col Rond Bordeaux",
-    "catégorie": "Sweats",
+    "categorie": "Sweats",
     "prix": 42.0,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc7oQyADZYdNuaN6t_IbXwGXW7uhqV69xiUjBgJdgvBg&s=10",
     "tailles": ["M", "L", "XL"]
@@ -186,7 +186,7 @@
   {
     "id": 24,
     "nom": "Sweat Zippé Bleu",
-    "catégorie": "Sweats",
+    "categorie": "Sweats",
     "prix": 54.5,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2JFmRHhq4FwQjNTZ00zblg8eHTt4sebcLRDvUAvxPg&s=10",
     "tailles": ["M", "L", "XL"]
@@ -194,7 +194,7 @@
   {
     "id": 25,
     "nom": "Pull en Laine Gris",
-    "catégorie": "Pulls",
+    "categorie": "Pulls",
     "prix": 64.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjAE4BOEr_Qm_IDT8i_1pUHU28ZIOlOgxk88DZ6VH0cA&s=10",
     "tailles": ["M", "L", "XL"]
@@ -202,7 +202,7 @@
   {
     "id": 26,
     "nom": "Pull Col Roulé Noir",
-    "catégorie": "Pulls",
+    "categorie": "Pulls",
     "prix": 59.0,
     "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800",
     "tailles": ["M", "L", "XL"]
@@ -210,7 +210,7 @@
   {
     "id": 27,
     "nom": "Pull Torsadé Écru",
-    "catégorie": "Pulls",
+    "categorie": "Pulls",
     "prix": 69.5,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5tW5iKK4EhRSOxuaj4M2HWh03no8X5MS9zfZ0S84UUA&s=10",
     "tailles": ["M", "L", "XL"]
@@ -218,7 +218,7 @@
   {
     "id": 28,
     "nom": "Gilet Cardigan Marine",
-    "catégorie": "Pulls",
+    "categorie": "Pulls",
     "prix": 57.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT37qLPgQOKKdAN7VLeMEPQ8Eefk9rxIIWVRHdP5XLnpQ&s=10",
     "tailles": ["M", "L", "XL"]
@@ -226,7 +226,7 @@
   {
     "id": 29,
     "nom": "Veste en Jean",
-    "catégorie": "Vestes",
+    "categorie": "Vestes",
     "prix": 79.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTgRzz9gbVvRM9H0bOiA3K2u-Naw9M0JMzA9gOIgj0rg&s=10",
     "tailles": ["M", "L", "XL"]
@@ -234,7 +234,7 @@
   {
     "id": 30,
     "nom": "Veste Bomber Verte",
-    "catégorie": "Vestes",
+    "categorie": "Vestes",
     "prix": 84.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjOyPnCGIUP0QRBwarKbmvZ3gJdxCVIKJXQht1vLQcqA&s=10",
     "tailles": ["M", "L", "XL"]
@@ -242,7 +242,7 @@
   {
     "id": 31,
     "nom": "Blouson en Cuir Noir",
-    "catégorie": "Vestes",
+    "categorie": "Vestes",
     "prix": 189.0,
     "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
     "tailles": ["M", "L", "XL"]
@@ -250,7 +250,7 @@
   {
     "id": 32,
     "nom": "Veste Légère Coupe-Vent",
-    "catégorie": "Vestes",
+    "categorie": "Vestes",
     "prix": 64.5,
     "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
     "tailles": ["M", "L", "XL"]
@@ -258,7 +258,7 @@
   {
     "id": 33,
     "nom": "Manteau d'Hiver Noir",
-    "catégorie": "Manteaux",
+    "categorie": "Manteaux",
     "prix": 129.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFcMdnBSd4Fx87emPa5W1xVwysxxzLs9cJrpL2BS3Bpg&s=10",
     "tailles": ["M", "L", "XL"]
@@ -266,7 +266,7 @@
   {
     "id": 34,
     "nom": "Parka Kaki",
-    "catégorie": "Manteaux",
+    "categorie": "Manteaux",
     "prix": 119.0,
     "image": "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800",
     "tailles": ["M", "L", "XL"]
@@ -274,7 +274,7 @@
   {
     "id": 35,
     "nom": "Doudoune Bleu Marine",
-    "catégorie": "Manteaux",
+    "categorie": "Manteaux",
     "prix": 139.5,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb_WNajXAt4VKpM78ks0jRi3SkV9j5g_pPoWYUbE3tqg&s=10",
     "tailles": ["M", "L", "XL"]
@@ -282,7 +282,7 @@
   {
     "id": 36,
     "nom": "Trench Beige",
-    "catégorie": "Manteaux",
+    "categorie": "Manteaux",
     "prix": 149.99,
     "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=800",
     "tailles": ["M", "L", "XL"]
@@ -290,7 +290,7 @@
   {
     "id": 37,
     "nom": "Survêtement Noir",
-    "catégorie": "Sport",
+    "categorie": "Sport",
     "prix": 64.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvAzKP2cQEvUaBFSVr19pcrhWS7P8QR3Nja4cnSvS7Jw&s=10",
     "tailles": ["M", "L", "XL"]
@@ -298,7 +298,7 @@
   {
     "id": 38,
     "nom": "Legging de Sport",
-    "catégorie": "Sport",
+    "categorie": "Sport",
     "prix": 29.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQvRO7dgN4dZxsJAVVzQAttMyH8IxhmV0OZ8e0TQ4M2w&s",
     "tailles": ["M", "L", "XL"]
@@ -306,7 +306,7 @@
   {
     "id": 39,
     "nom": "Maillot de Running",
-    "catégorie": "Sport",
+    "categorie": "Sport",
     "prix": 26.5,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxB54u4i7eNju7IGuvnqMuJBKu18cPlAI9JOL77pUHrw&s=10",
     "tailles": ["M", "L", "XL"]
@@ -314,7 +314,7 @@
   {
     "id": 40,
     "nom": "Veste de Sport Zippée",
-    "catégorie": "Sport",
+    "categorie": "Sport",
     "prix": 44.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUs0XanmU-cV5yiq3j6EUigNmC2pIvLdwO2zlVCFXytA&s=10",
     "tailles": ["M", "L", "XL"]
