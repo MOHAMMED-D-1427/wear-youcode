@@ -39,12 +39,25 @@
         </div> -->
         <!-- ======================================= -->
          <div class="filter-trier flex justify-between items-center mt-5">
-            <div class="border-2 border-gray-800 px-2 py-1 h-fit  rounded">
-                Filter</div>
+            <div class="">
+                <label for="filtrer" class="text-gray-600">Filtrer par categories</label><br>
+                <select name="filtrer" id="filtrer" class="border-2 border-gray-800 px-2 py-1 mt-1 h-fit rounded bg-black text-white">
+                    <option value="T-shirts">T-shirts</option>
+                    <option value="Polos">Polos</option>
+                    <option value="Chemises">Chemises</option>
+                    <option value="Pantalons">Pantalons</option>
+                    <option value="Shorts">Shorts</option>
+                    <option value="Sweats">Sweats</option>
+                    <option value="Pulls">Pulls</option>
+                    <option value="Vestes">Vestes</option>
+                    <option value="Manteaux">Manteaux</option>
+                    <option value="Sport">Sport</option>
+                </select>
+            </div>
 
             <div class="">
                 <label for="trier" class="text-gray-600">Trier par</label><br>
-                <select name="trier" id="trier" class="border-2 border-gray-800 px-2 py-1 h-fit rounded bg-black text-white">
+                <select name="trier" id="trier" class="border-2 border-gray-800 px-2 py-1 mt-1 h-fit rounded bg-black text-white">
                     <option value="asc">Prix croissant</option>
                     <option value="desc">Prix décroissant</option>
                     <option value="a-to-z">Marques de A à Z</option>
@@ -75,6 +88,8 @@
                         <div class="text-green-700">
                             <div class="prix inline">40</div> DH
                         </div>
+                        <i class="fas fa-arrow-left"></i>
+                        <i class="fas fa-arrow-right"></i>
                     </div>
                     <button class="bg-green-700 px-2 py-1 my-1.5 rounded cursor-pointer hover:bg-green-400 ">Ajouter +</ajouter>
 
