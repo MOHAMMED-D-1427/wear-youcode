@@ -78,9 +78,10 @@ export function showProducts(){
     
     // console.log(cards)
     pageItems.forEach(p =>{
-
+    
         let div = document.createElement("div");
-        div.className = "card rounded-xl overflow-hidden w-50 cursor-pointer hover:opacity-80";
+        div.className = "card rounded-xl overflow-hidden w-50 cursor-grab hover:opacity-80";
+        div.dataset.id = p.id;
         div.innerHTML = `
                 <img class="p-image w-50 h-50 object-cover" src="${p.image}" 
                 alt="${p.nom}">
@@ -93,7 +94,7 @@ export function showProducts(){
                             <div class="prix inline">${p.prix}</div> DH
                         </div>
                     </div>
-                    <button class="bg-green-700 px-2 py-1 my-1.5 rounded cursor-pointer hover:bg-green-400 ">Ajouter +</ajouter>
+                    <button class="add-to-cart bg-green-700 px-2 py-1 my-1.5 rounded cursor-pointer hover:bg-green-400 ">Ajouter +</button>
                 </div>
             `
             cards.append(div);
