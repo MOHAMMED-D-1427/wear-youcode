@@ -1,7 +1,7 @@
 
 let layout = document.querySelector(".layout-container")
 let cardsContainer = document.querySelector("#cards")
-let images = document.querySelectorAll(".p-image");
+let images = document.getElementsByClassName("p-image");
 let cards = cardsContainer.getElementsByClassName("card");
 let productInfo = cardsContainer.getElementsByClassName("p-info-container");
 
@@ -9,8 +9,9 @@ export function changeCardsLayout(){
     if(cardsContainer.classList.contains("grid")){
                 cardsContainer.classList.remove("grid", "md:grid-cols-3", "sm:grid-cols-2");
                 cardsContainer.classList.add("flex","flex-col");
-                for(i of images){
-                    i.classList.remove("object-cover");
+                for(let i of images){
+                    i.classList.add("w-22.5","h-22.5");
+                    i.classList.remove("w-50","h-50");
                 }
                 for(let c of cards){
                     c.classList.add("flex", "w-full", "h-[84px]", "gap-3.5")
@@ -22,8 +23,9 @@ export function changeCardsLayout(){
             }else{
                 cardsContainer.classList.add("grid", "md:grid-cols-3", "sm:grid-cols-2");
                 cardsContainer.classList.remove("flex","flex-col");
-                for(i of images){
-                    i.classList.add("object-cover");
+                for(let i of images){
+                    i.classList.remove("w-22.5","h-22.5");
+                    i.classList.add("w-50","h-50");
                 }
                 for(let c of cards){
                     c.classList.remove("flex", "w-full", "h-[84px]", "gap-3.5")

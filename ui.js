@@ -17,34 +17,52 @@ const tototalPages = Math.ceil(list.length / perPage);
 
 
 // ===================================== Search
-search.addEventListener('input', (e)=>{
-    list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
-    showProducts()
-});
-// ===================================== Sort
-trier.addEventListener("click", (e)=>{
-    let orderType = e.target.value;
-    if(orderType == 'asc'){
-        list = list.sort((a, b)=> a.prix - b.prix);
-    }
-    if(orderType == 'desc'){
-        list = list.sort((a, b)=> b.prix - a.prix);
-    }
-    if(orderType == 'a-to-z'){
-        list = list.sort((a, b)=> a.nom.localeCompare(b.nom));
-    }
-    if(orderType == 'z-to-a'){
-        list = list.sort((a, b)=> b.nom.localeCompare(a.nom));
-    }
-    showProducts();
-})
-// ===================================== Filter
-filtrer.addEventListener("click", (e)=>{
-    list = data.filter(p => p.categorie == e.target.value);
-    console.log(list)
-    showProducts();
-})
+function searchProducts(){
 
+    search.addEventListener('input', (e)=>{
+        list = data.filter(p => p.nom.toLowerCase().includes(e.target.value.toLowerCase()))
+        showProducts()
+    });
+}
+searchProducts()
+// ===================================== Sort
+function sortProducts(){
+
+    trier.addEventListener("click", (e)=>{
+        let orderType = e.target.value;
+        if(orderType == 'asc'){
+            list = list.sort((a, b)=> a.prix - b.prix);
+        }
+        if(orderType == 'desc'){
+            list = list.sort((a, b)=> b.prix - a.prix);
+        }
+        if(orderType == 'a-to-z'){
+            list = list.sort((a, b)=> a.nom.localeCompare(b.nom));
+        }
+        if(orderType == 'z-to-a'){
+        list = list.sort((a, b)=> b.nom.localeCompare(a.nom));
+        }
+        showProducts();
+    })
+}
+sortProducts();
+
+// ===================================== Filter
+function filterByCategories(){
+    filtrer.addEventListener("click", (e)=>{
+        const cat = e.target.value;
+        if(cat == "Tout"){
+            list = data;
+            showProducts();
+            return ;
+        }
+        list = data.filter(p => p.categorie == e.target.value);
+        console.log(list)
+        showProducts();
+    })
+}
+
+filterByCategories();
 
 export function showProducts(){
     cards.innerHTML = "" 
@@ -60,12 +78,14 @@ export function showProducts(){
     
     // console.log(cards)
     pageItems.forEach(p =>{
-
+    
         let div = document.createElement("div");
-        div.className = "card rounded-xl overflow-hidden w-50 cursor-pointer hover:opacity-80";
+        div.className = "card rounded-xl overflow-hidden w-50 cursor-grab hover:opacity-80";
+        div.dataset.id = p.id;
+        div.draggable = true
         div.innerHTML = `
                 <img class="p-image w-50 h-50 object-cover" src="${p.image}" 
-                alt="${p.nom}">
+                alt="${p.nom}" draggable='false'>
 
                 <div class="p-info-container p-1 flex flex-col ">
                     <div>
@@ -75,7 +95,7 @@ export function showProducts(){
                             <div class="prix inline">${p.prix}</div> DH
                         </div>
                     </div>
-                    <button class="bg-green-700 px-2 py-1 my-1.5 rounded cursor-pointer hover:bg-green-400 ">Ajouter +</ajouter>
+                    <button class="add-to-cart bg-green-700 px-2 py-1 my-1.5 rounded cursor-pointer hover:bg-green-400 ">Ajouter +</button>
                 </div>
             `
             cards.append(div);
