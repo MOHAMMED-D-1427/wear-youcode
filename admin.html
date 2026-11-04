@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/output.css">
+    <script src="https://kit.fontawesome.com/a034b0a078.js" crossorigin="anonymous"></script>
+    <title>Administration</title>
+</head>
+<body class="bg-black text-white ">
+    <header class="w-full px-3 pt-4 bg-gray-900 fixed top-0 z-10 ">
+        <div class="w-11/12 m-auto flex justify-between items-center">
+            <a href="#">
+                <img src="./assets/logo.png" class="w-39" alt="Logo">
+            </a>
+            
+
+        </div>
+        <!-- =================================================== Cart space -->
+         <!-- w-11/12 -->
+         <div id="cart-space" class="fixed z-10 w-4/6 h-screen bg-gray-900 top-37.25 -right-full transition-all shadow shadow-gray-300
+            overflow-y-scroll scrollbar-thin scrollbar-thumb-green-700 pb-28 ">
+
+             <div class="rounded-xl m-3.5 overflow-hidden w-auto bg-gray-800 flex ">
+                <img class="w-27 object-cover" src="https://media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/b243d9d5-44ae-4fad-a3f3-7e4b4ed2e3ea_medium.webp" 
+                alt="T-shirt Noir Coton">
+
+                <div class="p-info-container p-1 px-2 flex w-full justify-between items-end">
+                    <div class="h-full">
+                        <div class="nom text-2xl">T-shirt Noir Coton</div>
+                        <div class="text-gray-700">M &nbsp;&nbsp;&nbsp; L &nbsp;&nbsp;&nbsp; XL</div>
+                        <div class="text-green-700">
+                            <div class="prix inline">40</div> DH
+                        </div>
+                        
+                    </div>
+                    <div class="flex items-center w-19.5 justify-between">
+                        <button class="bg-green-700 h-fit  px-2 my-1.5 inline  rounded cursor-pointer hover:bg-green-900 ">+</button>
+                        <span class="qty">5</span>
+                        <button class="bg-green-700 h-fit  px-2 my-1.5 inline  rounded cursor-pointer hover:bg-green-900 ">-</button>
+                    </div>
+
+                    <button class="absolute top-5 right-5 cursor-pointer hover:text-red-700" title="Supprimer?">
+                        <i class="fas fa-trash "></i></button>
+                </div>
+            </div>
+         </div>
+        <!-- =================================================== Nav space -->
+        <nav class="w-full px-3 p-4 bg-gray-900 fixed left-0 top-23.25 z-5 ">
+            <ul class="flex justify-around ">
+                <li class="font-bold hover:text-green-700 text-green-700">
+                    <a href="/admin.html"><i class="fas fas fa-user-cog"></i>Admin</a>
+                </li>
+                <li class="font-bold hover:text-green-700">
+                    <a href="/"><i class="fas fas fas fa-users "></i>User</a>
+                </li>
+                <li class="font-bold hover:text-green-700">
+                    <a href="#"><i class="fas far fa-envelope"></i>Contactez-nous</a>
+                </li>
+            </ul>
+        </nav>
+            
+    </header>
+    <!-- ================================= -->
+
+    <main class="w-11/12 m-auto my-42 flex flex-col">
+        <table class="border-2 border-gray-900">
+            <thead class="">
+                <tr class="fixed w-full ">
+                    <th class="border-2 border-gray-900 py-2 bg-[#607d8b8a]">ID</th>
+                    <th class="border-2 border-gray-900 bg-[#607d8b8a]">Nom</th>
+                    <th class="border-2 border-gray-900 bg-[#607d8b8a]">Prix</th>
+                    <th class="border-2 border-gray-900 bg-[#607d8b8a]">Categorie</th>
+                    <th class="border-2 border-gray-900 bg-[#607d8b8a]">Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script type="module" src="storage.js"></script>
+
+</body>
+</html>
