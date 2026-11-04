@@ -9,19 +9,20 @@ let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 panierIcon.addEventListener("click", ()=>{
     cartSpace.classList.toggle("right-0")
     cartSpace.classList.toggle("-right-full")
-})
-
+});
 
 
 // const product = products.find()
 const calculateTotalPrice = ()=>{
     const priceTotal = cartData.reduce((sum, p)=>{
         return sum + p.prix*p.qty
-    }, 0)
+    }, 0);
     prixTotalIcon.innerHTML = priceTotal.toFixed(2);
 }
 function showProductsInCart(){
     calculateTotalPrice();
+    console.log("Worked")
+
     // --------------------------------------
     cartSpace.innerHTML = "";
     for(let p of cartData){
@@ -60,7 +61,7 @@ function showProductsInCart(){
 showProductsInCart();
 
 function addProductToCart(){
-    document.addEventListener("click", (e)=>{
+    document.addEventListener("click" , (e)=>{
         if(e.target.matches(".add-to-cart")){
             const id = e.target.closest(".card[data-id]").dataset.id;
             // const updateCart = [...cartData, {productId: id}];
@@ -68,7 +69,7 @@ function addProductToCart(){
             
             if(!isInCart){ // ==> If it isn't in cart
                 const productInfo = products.find(p => p.id == id);
-                cartData.push({qty: 1, ...productInfo})
+                cartData.push({qty: 1, ...productInfo});
                 localStorage.setItem("cart", JSON.stringify(cartData));
             }else{ // ==> Otherwise, increace quantity
                 const increaceQty = {...isInCart, qty: ++isInCart.qty};
@@ -140,5 +141,5 @@ function deleteFromCart(){
 }
 deleteFromCart();
 
-export {addProductToCart};
+export {addProductToCart, showProductsInCart, calculateTotalPrice};
 

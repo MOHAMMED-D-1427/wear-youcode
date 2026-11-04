@@ -82,9 +82,10 @@ export function showProducts(){
         let div = document.createElement("div");
         div.className = "card rounded-xl overflow-hidden w-50 cursor-grab hover:opacity-80";
         div.dataset.id = p.id;
+        div.draggable = true
         div.innerHTML = `
                 <img class="p-image w-50 h-50 object-cover" src="${p.image}" 
-                alt="${p.nom}">
+                alt="${p.nom}" draggable='false'>
 
                 <div class="p-info-container p-1 flex flex-col ">
                     <div>

@@ -5,3 +5,17 @@
     box-shadow: 0 0 3px #434040;
 }
 
+
+
+/* ============ For Drag & Drop */
+/* .zone { 
+    min-height: 120px;
+    border: 2px dashed #888; padding: 10px;
+    margin: 10px;
+}
+.over{ 
+    background: #e8f5e9; 
+}
+.dragging { 
+    opacity: 0.4;
+} */
