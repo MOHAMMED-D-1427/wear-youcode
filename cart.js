@@ -7,8 +7,8 @@ const products = JSON.parse(localStorage.getItem("products")) || [];
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
 panierIcon.addEventListener("click", ()=>{
-    cartSpace.classList.toggle("right-0")
-    cartSpace.classList.toggle("-right-full")
+    cartSpace.classList.toggle("right-0");
+    cartSpace.classList.toggle("-right-full");
 });
 
 
@@ -20,8 +20,10 @@ const calculateTotalPrice = ()=>{
     prixTotalIcon.innerHTML = priceTotal.toFixed(2);
 }
 function showProductsInCart(){
+    cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
     calculateTotalPrice();
-    console.log("Worked")
+    // console.log("Worked")
 
     // --------------------------------------
     cartSpace.innerHTML = "";
@@ -64,8 +66,10 @@ function addProductToCart(){
     document.addEventListener("click" , (e)=>{
         if(e.target.matches(".add-to-cart")){
             const id = e.target.closest(".card[data-id]").dataset.id;
+            // console.log("id: ", id)
             // const updateCart = [...cartData, {productId: id}];
-            const isInCart = cartData.find(p => p.id == id);
+            const isInCart = cartData?.find(p => p.id == id);
+            // console.log("isInCart: ", isInCart)
             
             if(!isInCart){ // ==> If it isn't in cart
                 const productInfo = products.find(p => p.id == id);
@@ -78,19 +82,21 @@ function addProductToCart(){
                 console.log("Exsist")
             }
 
-            console.log(!isInCart);
-            // console.log("ADDED!"+cartData)
+
             showProductsInCart();
         }
     })
 }
 
 function incDecQty(){
+    
     document.addEventListener("click", (e)=>{
+        cartData = JSON.parse(localStorage.getItem("cart")); // When I drop to cart, we get the new data
         if(e.target.matches(".inc")){
             let id = e.target.closest("div[data-id]").dataset.id;
+
             const isInCart = cartData.find(p => p.id == id);
-            const increaceQty = {...isInCart, qty: ++isInCart.qty};
+            const increaceQty = ++isInCart.qty
             const updateCart = [...cartData.filter(p => p.id != id), increaceQty];
             localStorage.setItem("cart", JSON.stringify(updateCart));
     
@@ -98,23 +104,24 @@ function incDecQty(){
             let newQty = Number(qty.textContent);
             newQty++;
             qty.textContent = newQty;
-            console.log(newQty);
+            // console.log(newQty);
             calculateTotalPrice();
             showProductsInCart();
 
         }
         if(e.target.matches(".dec")){
+            let qty = e.target.closest("div[data-id]").querySelector(".qty");
+            let newQty = Number(qty.textContent);
+            if(newQty==1){
+                return ;
+            }
+            
             let id = e.target.closest("div[data-id]").dataset.id;
             const isInCart = cartData.find(p => p.id == id);
             const increaceQty = {...isInCart, qty: --isInCart.qty};
             const updateCart = [...cartData.filter(p => p.id != id), increaceQty];
             localStorage.setItem("cart", JSON.stringify(updateCart));
     
-            let qty = e.target.closest("div[data-id]").querySelector(".qty");
-            let newQty = Number(qty.textContent);
-            if(newQty==1){
-                return ;
-            }
             newQty--
             qty.textContent = newQty;
             calculateTotalPrice();
@@ -131,15 +138,16 @@ function deleteFromCart(){
         if(e.target.matches(".delete")){
             const id = e.target.dataset.id;
             const updateCart = cartData.filter(p => p.id != id);
+
             localStorage.setItem("cart", JSON.stringify(updateCart));
             cartData = updateCart;
+
             calculateTotalPrice();
-            
             showProductsInCart();
         }
     })
 }
 deleteFromCart();
 
-export {addProductToCart, showProductsInCart, calculateTotalPrice};
+export {addProductToCart, showProductsInCart, calculateTotalPrice, incDecQty};
 
