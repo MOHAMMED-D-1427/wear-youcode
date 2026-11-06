@@ -16,8 +16,8 @@ function showProductsAdmin(){
             <img class="w-15" src="${p.image}" alt="${p.nom}"/>
         </td>
         <td class="${border}" data-id='${p.id}'>
-            <button class="modify-action w-full p-2 mb-2 bg-[#0000ff5e] cursor-pointer hover:bg-[#6c6cff5e]"><i class="fas fa-pen-square"></i> Modifier</button><br>
-            <button class="delete w-full p-2 mb-2 bg-[#ff00005e] cursor-pointer hover:bg-[#ff6c6c5e]"><i class="fas fa-trash"></i> Supprimer</button>
+            <button class="modify-action w-full p-2 mb-2 bg-[#0000ff5e] cursor-pointer hover:bg-[#6c6cff5e] relative z-10"><i class="fas fa-pen-square relative -z-10"></i> Modifier</button><br>
+            <button class="delete w-full p-2 mb-2 bg-[#ff00005e] cursor-pointer hover:bg-[#ff6c6c5e] relative z-10"><i class="fas fa-trash relative -z-10"></i> Supprimer</button>
             </td>
             </tr>`
         });
@@ -31,6 +31,17 @@ const form = document.querySelector(".form-container");
 document.addEventListener("click", (e)=>{
     if(e.target.matches(".modify-action")){
         form.classList.remove("invisible");
+        const id = e.target.closest("[data-id]").dataset.id;
+        // const productCard = e.target.closest("[data-id]")
+        const productInfo = products.find(p => p.id == id);
+        form.querySelector("#p-nom").value = productInfo.nom
+        form.querySelector("#p-cat").value = productInfo.categorie
+        form.querySelector("#p-prix").value = productInfo.prix
+        form.querySelector("#p-img").value = productInfo.image
+
+        console.log(productInfo)
+        // console.log(form.querySelector("#p-nom").value)
+
     }
 
     if(e.target.matches(".form-container")){
@@ -43,6 +54,9 @@ document.addEventListener("click", (e)=>{
         console.log("Clicked")
     }
 })
+// --------------------> Modify action
+
+
 
 // ==================================== Delete Product
 document.addEventListener("click", (e)=>{
@@ -52,7 +66,7 @@ document.addEventListener("click", (e)=>{
         console.log(id)
         products = update;
         localStorage.setItem("products", JSON.stringify(products));
-        showProductsAdmin()
+        showProductsAdmin();
     }
 })
 

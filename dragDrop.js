@@ -86,7 +86,7 @@ function dragDrop(){
 // ==========> Drop/move/copy the product to the CART
 
     document.addEventListener("drop", (e)=>{
-        cartData = JSON.parse(localStorage.getItem("cart"));
+        cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
         const cartIcon = e.target.closest("#panier");
         if(!cartIcon || !dragged) return; // .. || empty
@@ -110,8 +110,8 @@ function dragDrop(){
             localStorage.setItem("cart", JSON.stringify(cartData));
         }else{
             // console.warn("----> In cart");
-            const increaceQty = isInCart.qty++
-            const updateCart = [...cartData.filter(p => p.id != id), increaceQty];
+            isInCart.qty++
+            const updateCart = [...cartData.filter(p => p.id != id), isInCart];
             cartData = updateCart;
             localStorage.setItem("cart", JSON.stringify(updateCart));
             

@@ -20,7 +20,6 @@ const calculateTotalPrice = ()=>{
     prixTotalIcon.innerHTML = priceTotal.toFixed(2);
 }
 function showProductsInCart(){
-    cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
     calculateTotalPrice();
     // console.log("Worked")
@@ -63,16 +62,22 @@ function showProductsInCart(){
 showProductsInCart();
 
 function addProductToCart(){
+
     document.addEventListener("click" , (e)=>{
+        cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
         if(e.target.matches(".add-to-cart")){
             const id = e.target.closest(".card[data-id]").dataset.id;
             // console.log("id: ", id)
+
+            console.log("cartData: ", cartData )
             // const updateCart = [...cartData, {productId: id}];
-            const isInCart = cartData?.find(p => p.id == id);
+            const isInCart = cartData.find(p => p.id == id);
             // console.log("isInCart: ", isInCart)
             
             if(!isInCart){ // ==> If it isn't in cart
                 const productInfo = products.find(p => p.id == id);
+
                 cartData.push({qty: 1, ...productInfo});
                 localStorage.setItem("cart", JSON.stringify(cartData));
             }else{ // ==> Otherwise, increace quantity
@@ -96,8 +101,8 @@ function incDecQty(){
             let id = e.target.closest("div[data-id]").dataset.id;
 
             const isInCart = cartData.find(p => p.id == id);
-            const increaceQty = ++isInCart.qty
-            const updateCart = [...cartData.filter(p => p.id != id), increaceQty];
+            ++isInCart.qty
+            const updateCart = [...cartData.filter(p => p.id != id), isInCart];
             localStorage.setItem("cart", JSON.stringify(updateCart));
     
             let qty = e.target.closest("div[data-id]").querySelector(".qty");
@@ -118,8 +123,8 @@ function incDecQty(){
             
             let id = e.target.closest("div[data-id]").dataset.id;
             const isInCart = cartData.find(p => p.id == id);
-            const increaceQty = {...isInCart, qty: --isInCart.qty};
-            const updateCart = [...cartData.filter(p => p.id != id), increaceQty];
+            --isInCart.qty
+            const updateCart = [...cartData.filter(p => p.id != id), isInCart];
             localStorage.setItem("cart", JSON.stringify(updateCart));
     
             newQty--
