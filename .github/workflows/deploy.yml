@@ -27,11 +27,12 @@ jobs:
       - run: npm run build
 
       # Copy only the files the site needs (keeps node_modules out)
-      - run: |
+      - name: Prepare site files
+        run: |
           mkdir _site
-          cp index.html _site/
-          cp -r dist _site/
-          # add other folders if you have them, e.g. cp -r images _site/
+          cp *.html _site/
+          cp *.js _site/
+          cp -r assets css data _site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
