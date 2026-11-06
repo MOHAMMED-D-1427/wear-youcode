@@ -1,4 +1,4 @@
-# auchan-youcode
+# wear-youcode
 
 ├── index.html # Structure principale de la page
 
