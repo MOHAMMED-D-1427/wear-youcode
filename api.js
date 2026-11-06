@@ -9,6 +9,7 @@ async function getProducts(){
 
         const products = JSON.parse(localStorage.getItem("products")) || data;
         localStorage.setItem("products", JSON.stringify(products));
+        
 
         return products;
     }catch (error) {

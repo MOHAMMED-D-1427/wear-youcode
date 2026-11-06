@@ -1,5 +1,7 @@
 // import { calculateTotalPrice, showProductsInCart } from "./cart.js";
 
+// import { incDecQty } from "./cart.js";
+
 const prixTotalIcon = document.getElementById("prix-total-icon");
 const cartSpace = document.getElementById("cart-space");
 
@@ -16,6 +18,8 @@ const calculateTotalPrice = ()=>{
     prixTotalIcon.innerHTML = priceTotal.toFixed(2);
 }
 function showProductsInCart(){
+    cartData = JSON.parse(localStorage.getItem("cart"));
+
     calculateTotalPrice();
     console.log("Worked")
 
@@ -60,6 +64,7 @@ function showProductsInCart(){
 let dragged = null;
 
 function dragDrop(){
+    // incDecQty()
     // ====> Start dragging(For CARD)
 
     document.addEventListener("dragstart", (e)=>{
@@ -81,24 +86,38 @@ function dragDrop(){
 // ==========> Drop/move/copy the product to the CART
 
     document.addEventListener("drop", (e)=>{
+        cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
         const cartIcon = e.target.closest("#panier");
         if(!cartIcon || !dragged) return; // .. || empty
         
         e.preventDefault();
         // ==================================
+        
         const id = dragged.dataset.id;
+        console.log("dragged: ", dragged);
+        console.log("id: ", id);
         const isInCart = cartData.find(p => p.id == id);
+        console.log("isInCart: ", isInCart);
 
         if(!isInCart){ 
             const productInfo = products.find(p => p.id == id);
-            cartData.push({qty: 1, ...productInfo})
+            // console.warn("----> New cart");
+            // console.log("> > > cartData b:", cartData)
+            cartData.push({qty: 1, ...productInfo});
+            // console.log("> > > cartData a:", cartData)
+            // cartData = updateCart;
             localStorage.setItem("cart", JSON.stringify(cartData));
         }else{
-            const increaceQty = {...isInCart, qty: ++isInCart.qty};
-            const updateCart = [...cartData.filter(p => p.id != id), increaceQty];
+            // console.warn("----> In cart");
+            isInCart.qty++
+            const updateCart = [...cartData.filter(p => p.id != id), isInCart];
+            cartData = updateCart;
             localStorage.setItem("cart", JSON.stringify(updateCart));
+            
         }
+
+        // showProductsInCart();
 
         // console.log("===> Dropped!")
     })
