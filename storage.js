@@ -1,3 +1,5 @@
+import { useEffectEvent } from "react";
+
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 const body = document.querySelector("tbody")
@@ -114,24 +116,24 @@ document.addEventListener("click", (e)=>{
         formAdd.classList.add("invisible");
     }
     // -------------------> Add action
-    // if(e.target.matches("#ajouter")){
-    //     e.preventDefault()
-    //     let pId = products[products.length-1].id
+    if(e.target.matches("#ajouter")){
+        e.preventDefault()
+        let pId = products[products.length-1].id
 
-    //     let newProduct = {}
-    //     newProduct.id = ++pId;
-    //     // console.log(pId)
-    //     // console.log(newProduct)
-    //     newProduct.nom = formAdd.querySelector("#p-nom").value;
-    //     newProduct.categorie = formAdd.querySelector("#p-cat").value;
-    //     newProduct.prix = formAdd.querySelector("#p-prix").value;
-    //     newProduct.image = formAdd.querySelector("#p-img").value;
+        let newProduct = {}
+        newProduct.id = ++pId;
+        // console.log(pId)
+        // console.log(newProduct)
+        newProduct.nom = formAdd.querySelector("#p-nom").value;
+        newProduct.categorie = formAdd.querySelector("#p-cat").value;
+        newProduct.prix = formAdd.querySelector("#p-prix").value;
+        newProduct.image = formAdd.querySelector("#p-img").value;
 
-    //     localStorage.setItem("products", JSON.stringify([...products, newProduct]))
-    //     showProductsAdmin()
-    //     formAdd.classList.add("invisible");
-    //     // console.log(newProduct)
-    // }
+        localStorage.setItem("products", JSON.stringify([...products, newProduct]))
+        showProductsAdmin()
+        formAdd.classList.add("invisible");
+        // console.log(newProduct)
+    }
 })
 
 
