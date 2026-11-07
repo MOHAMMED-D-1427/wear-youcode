@@ -1,3 +1,4 @@
+import { allValid, allValid2, validation, validation2 } from "./validation.js";
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
@@ -60,11 +61,20 @@ document.addEventListener("click", (e)=>{
         e.preventDefault()
         let newProduct = {}
         console.log(pId)
+        const nom = form.querySelector("#p-nom").value;
+        const categorie = form.querySelector("#p-cat").value;
+        const prix = form.querySelector("#p-prix").value;
+        const image = form.querySelector("#p-img").value;
+        
+        if(nom.trim() == "" || categorie.trim() == "" || prix.trim() == "" || image.trim() == "") return  
+        if(!allValid2) return  
+
         newProduct.id = Number(pId);
-        newProduct.nom = form.querySelector("#p-nom").value;
-        newProduct.categorie = form.querySelector("#p-cat").value;
-        newProduct.prix = Number(form.querySelector("#p-prix").value);
-        newProduct.image = form.querySelector("#p-img").value;
+        newProduct.nom = nom
+        newProduct.categorie = categorie
+        newProduct.prix = Number(prix)
+        newProduct.image = image
+
 
         const update = products.map((p)=>{
             if(p.id == pId){
@@ -109,16 +119,26 @@ document.addEventListener("click", (e)=>{
     }
     // -------------------> Add action
     if(e.target.matches("#ajouter")){
+    // console.log(e.target.closest("#ajouter"))
+
         e.preventDefault()
+        console.log("Stor: ",allValid)
+        const nom = formAdd.querySelector("#p-nom").value;
+        const categorie = formAdd.querySelector("#p-cat").value;
+        const prix = formAdd.querySelector("#p-prix").value;
+        const image = formAdd.querySelector("#p-img").value;
+        if(nom.trim() == "" || categorie.trim() == "" || prix.trim() == "" || image.trim() == "") return  
+        if(!allValid) return  
+
         let pId = products[products.length-1].id
 
         let newProduct = {}
         newProduct.id = ++pId;
 
-        newProduct.nom = formAdd.querySelector("#p-nom").value;
-        newProduct.categorie = formAdd.querySelector("#p-cat").value;
-        newProduct.prix = formAdd.querySelector("#p-prix").value;
-        newProduct.image = formAdd.querySelector("#p-img").value;
+        newProduct.nom = nom;
+        newProduct.categorie = categorie
+        newProduct.prix = Number(prix)
+        newProduct.image = image
 
         localStorage.setItem("products", JSON.stringify([...products, newProduct]))
         showProductsAdmin()
@@ -127,7 +147,8 @@ document.addEventListener("click", (e)=>{
 })
 
 
-
+validation()
+validation2()
 
 
 
