@@ -4,6 +4,7 @@ const body = document.querySelector("tbody")
 const border = "border-2 border-gray-900"
 
 function showProductsAdmin(){
+    products = JSON.parse(localStorage.getItem("products")) || []
     body.innerHTML = ""
 
     products.forEach(p =>{
@@ -16,7 +17,7 @@ function showProductsAdmin(){
             <img class="w-15" src="${p.image}" alt="${p.nom}"/>
         </td>
         <td class="${border}" data-id='${p.id}'>
-            <button class="modify-action w-full p-2 mb-2 bg-[#0000ff5e] cursor-pointer hover:bg-[#6c6cff5e] relative z-10"><i class="fas fa-pen-square relative -z-10"></i> Modifier</button><br>
+            <button class="modify-popup w-full p-2 mb-2 bg-[#0000ff5e] cursor-pointer hover:bg-[#6c6cff5e] relative z-10"><i class="fas fa-pen-square relative -z-10"></i> Modifier</button><br>
             <button class="delete w-full p-2 mb-2 bg-[#ff00005e] cursor-pointer hover:bg-[#ff6c6c5e] relative z-10"><i class="fas fa-trash relative -z-10"></i> Supprimer</button>
             </td>
             </tr>`
@@ -28,10 +29,12 @@ showProductsAdmin()
 // --------------------> Popup
 const form = document.querySelector(".form-container");
 
+let pId = null;
 document.addEventListener("click", (e)=>{
-    if(e.target.matches(".modify-action")){
+    if(e.target.matches(".modify-popup")){
         form.classList.remove("invisible");
         const id = e.target.closest("[data-id]").dataset.id;
+        pId = id;
         // const productCard = e.target.closest("[data-id]")
         const productInfo = products.find(p => p.id == id);
         form.querySelector("#p-nom").value = productInfo.nom
@@ -39,7 +42,8 @@ document.addEventListener("click", (e)=>{
         form.querySelector("#p-prix").value = productInfo.prix
         form.querySelector("#p-img").value = productInfo.image
 
-        console.log(productInfo)
+
+        // console.log(productInfo)
         // console.log(form.querySelector("#p-nom").value)
 
     }
@@ -53,8 +57,35 @@ document.addEventListener("click", (e)=>{
         formAdd.classList.add("invisible");
         console.log("Clicked")
     }
+    // --------------------> Modify action
+
+    if(e.target.matches("#modify")){
+        e.preventDefault()
+        let newProduct = {}
+        console.log(pId)
+        newProduct.id = Number(pId);
+        newProduct.nom = form.querySelector("#p-nom").value;
+        newProduct.categorie = form.querySelector("#p-cat").value;
+        newProduct.prix = Number(form.querySelector("#p-prix").value);
+        newProduct.image = form.querySelector("#p-img").value;
+
+        const update = products.map((p)=>{
+            if(p.id == pId){
+                return newProduct
+            }
+            return p
+        })
+
+
+        localStorage.setItem("products", JSON.stringify(update))
+        showProductsAdmin()
+        form.classList.add("invisible");
+
+
+        console.log(update);
+    }
+
 })
-// --------------------> Modify action
 
 
 
@@ -82,6 +113,25 @@ document.addEventListener("click", (e)=>{
     if(e.target.matches(".form-container-add")){
         formAdd.classList.add("invisible");
     }
+    // -------------------> Add action
+    // if(e.target.matches("#ajouter")){
+    //     e.preventDefault()
+    //     let pId = products[products.length-1].id
+
+    //     let newProduct = {}
+    //     newProduct.id = ++pId;
+    //     // console.log(pId)
+    //     // console.log(newProduct)
+    //     newProduct.nom = formAdd.querySelector("#p-nom").value;
+    //     newProduct.categorie = formAdd.querySelector("#p-cat").value;
+    //     newProduct.prix = formAdd.querySelector("#p-prix").value;
+    //     newProduct.image = formAdd.querySelector("#p-img").value;
+
+    //     localStorage.setItem("products", JSON.stringify([...products, newProduct]))
+    //     showProductsAdmin()
+    //     formAdd.classList.add("invisible");
+    //     // console.log(newProduct)
+    // }
 })
 
 

@@ -77,6 +77,22 @@ This website is assignment of a sprint from YouCode school, and I have built it 
 - `features/*`: one branch per feature
 - Commits follow: `feat:`, `fix:`, `style:`, `docs:`
 
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/MOHAMMED-D-1427/REPO-NAME.git
+
+# Go to the project folder
+cd REPO-NAME
+
+# Install dependencies
+npm install
+
+# Build the CSS
+npm run build
+```
+
 ## Author
 
 **Mohammed Darkaoui**
