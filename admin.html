@@ -82,21 +82,24 @@
 
     <div class="form-container invisible flex items-center fixed top-0 right-0 z-20  w-full h-full bg-[#000000cb]">
 
-        <form class="relative mx-auto flex w-full max-w-md flex-col gap-5 rounded-2xl border border-gray-700 bg-gray-900 p-8 px-3 shadow-xl shadow-black/40">
+        <form id="modifingForm" class="relative mx-auto flex w-full max-w-md flex-col gap-5 rounded-2xl border border-gray-700 bg-gray-900 p-8 px-3 shadow-xl shadow-black/40">
             <div class="text-3xl text-center font-bold">Modifier</div>
             <div class="flex flex-col gap-2">
                 <label for="p-nom" class="text-sm font-bold ">Nom:</label>
                 <input type="text" id="p-nom" placeholder="Entrez nom de produit" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <span class="text-red-700 font-bold" id="msg-nom"></span>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="p-cat" class="text-sm font-bold ">Categorie:</label>
                 <input type="text" id="p-cat" placeholder="Entrez categorie de produit" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <span class="text-red-700 font-bold" id="msg-cat"></span>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="p-prix" class="text-sm font-bold ">Prix:</label>
                 <input id="p-prix" placeholder="Entrez prix de produit" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <span class="text-red-700 font-bold" id="msg-prix"></span>
             </div>
             
             <div class="flex flex-col gap-2">
@@ -118,21 +121,24 @@
 
     <div class="form-container-add invisible flex items-center fixed top-0 right-0 z-20  w-full h-full bg-[#000000cb]">
 
-        <form class="relative mx-auto flex w-full max-w-md flex-col gap-5 rounded-2xl border border-gray-700 bg-gray-900 p-8 px-3 shadow-xl shadow-black/40">
+        <form id="addingForm" class="relative mx-auto flex w-full max-w-md flex-col gap-5 rounded-2xl border border-gray-700 bg-gray-900 p-8 px-3 shadow-xl shadow-black/40">
             <div class="text-3xl text-center font-bold">Ajouter</div>
             <div class="flex flex-col gap-2">
                 <label for="p-nom" class="text-sm font-bold ">Nom:</label>
-                <input type="text" id="p-nom" placeholder="Entrez nom de produit" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <input type="text" id="p-nom" placeholder="Entrez nom de produit" required class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <span class="text-red-700 font-bold" id="msg-nom"></span>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="p-cat" class="text-sm font-bold ">Categorie:</label>
                 <input type="text" id="p-cat" placeholder="Entrez categorie de produit" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <span class="text-red-700 font-bold" id="msg-cat"></span>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="p-prix" class="text-sm font-bold ">Prix:</label>
                 <input id="p-prix" placeholder="Entrez prix de produit" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+                <span class="text-red-700 font-bold" id="msg-prix"></span>
             </div>
             
             <div class="flex flex-col gap-2">
@@ -140,7 +146,7 @@
                 <input id="p-img" placeholder="Entrez image de produit(URL)" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
             </div>
             
-            <button id="ajouter" class="bg-green-700 px-2.5 py-1 rounded cursor-pointer hover:bg-green-400">
+            <button id="ajouter" class="bg-green-700 px-2.5 py-1 rounded cursor-pointer hover:bg-green-400 ">
                 Ajouter
             </button>
             <!-- ----------------- -->
