@@ -182,3 +182,8 @@ function randomUser(){
         form.querySelector("#tel").value = phone
     })
 }
+
+
+// ===================
+const date = Date().split(" ")[3];
+document.querySelector("#date").textContent = date;
