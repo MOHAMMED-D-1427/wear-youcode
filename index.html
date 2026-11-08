@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/output.css">
     <script src="https://kit.fontawesome.com/a034b0a078.js" crossorigin="anonymous"></script>
 
@@ -19,7 +20,7 @@
             
             <div class="relative">
                 <input type="text" placeholder="Rechercher un produit..." id="search" 
-                class="border-2 border-gray-800 p-2 w-112.5 ">
+                class="border-2 border-gray-800 p-2 lg:w-112.5  md:w-80.5">
                 <i class="fas fa-search absolute text-2xl right-2.5 top-2.5" ></i>
             </div>
             
@@ -30,7 +31,7 @@
         </div>
         <!-- =================================================== Cart space -->
          <!-- w-11/12 -->
-         <div id="cart-space" class="fixed z-10 w-4/6 h-screen bg-gray-900 top-37.25 -right-full transition-all shadow shadow-gray-300
+         <div id="cart-space" class="fixed z-10 lg:w-162.5 md:w-155 h-screen bg-gray-900 top-41.25 -right-full transition-all shadow shadow-gray-300
             overflow-y-scroll scrollbar-thin scrollbar-thumb-green-700 pb-40">
             <!-- <div class="">No products yet!</div> -->
 
@@ -67,15 +68,15 @@
                 <li class="font-bold hover:text-green-700 text-green-700">
                     <a href="/"><i class="fas fas fas fa-users "></i> User</a>
                 </li>
-                <li class="font-bold hover:text-green-700">
-                    <a href="#"><i class="fas far fa-envelope"></i> Contactez-nous</a>
+                <li id="contact" class="font-bold bg-green-700 p-2 rounded hover:bg-green-500 cursor-pointer">
+                    <i class="fas far fa-envelope"></i> Contactez-nous
                 </li>
                 </ul>
         </nav>
             
     </header>
 
-    <main class="w-11/12 m-auto mt-36 flex flex-col ">
+    <main class="w-11/12 m-auto mt-40 mb-25 flex flex-col ">
         <!-- ======================================= Filter & Sort -->
          <div class="filter-trier flex justify-between items-center mt-5">
             <div class="">
@@ -140,6 +141,46 @@
 
         </section>
         <div id="pagination" class="m-auto"></div>
+        <!-- ================================= Form To Contact -->
+
+    <div class="form-container invisible flex items-center fixed top-0 right-0 z-20  w-full h-full bg-[#000000cb]">
+
+        <form  class="relative mx-auto flex w-full max-w-md flex-col gap-5 rounded-2xl border border-gray-700 bg-gray-900 p-8 px-3 shadow-xl shadow-black/40">
+            <div class="text-3xl text-center font-bold">Contactez-nous</div>
+            <div class="flex flex-col gap-2">
+                <label for="nom" class="text-sm font-bold ">Nom:</label>
+                <input type="text" id="nom" placeholder="Entrez votre nom" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <label for="address" class="text-sm font-bold ">Address:</label>
+                <input type="text" id="address" placeholder="Entrez votre adresse" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-sm font-bold ">Email:</label>
+                <input id="email" placeholder="Entrez votre e-mail" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <label for="tel" class="text-sm font-bold ">Num de Tel:</label>
+                <input id="tel" placeholder="Entrez votre numéro de téléphone" class="rounded-lg border border-gray-700 bg-black px-4 py-2.5 text-white outline-none transition focus:border-green-500 ">
+            </div>
+            
+            <div class="flex gap-2">
+                <button id="send" class="bg-green-700 px-2.5 py-1 rounded cursor-pointer hover:bg-green-400">
+                    Envoyer
+                </button>
+                <button id="autofill" class="border-2 active:opacity-80 border-green-700 px-2.5 py-1 rounded cursor-pointer hover:bg-green-400">
+                    Remplissage auto
+                </button>
+            </div>
+            <!-- ----------------- -->
+             <div class="fa-xmark hover:text-red-700 cursor-pointer absolute top-2.5 right-2.5 z-10">
+                 <i class="fa-solid fa-xmark text-3xl font-bold relative -z-1"></i>
+            </div>
+        </form>
+    </div>
     </main>
 
 

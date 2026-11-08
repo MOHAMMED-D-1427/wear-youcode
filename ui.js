@@ -140,4 +140,45 @@ pagination.addEventListener("click", (e)=>{
     showProducts()
 })
 
+//======================================== Contact Form
+const form = document.querySelector(".form-container")
+document.addEventListener("click", (e)=>{
+    if(e.target.matches(".form-container") || e.target.matches(".fa-xmark")){
+        form.classList.add("invisible");
+    }
+    if(e.target.matches("#contact")){
+        form.classList.remove("invisible");
+    }
+    if(e.target.matches("#autofill")){
+        e.preventDefault()
+        randomUser();
+    }
+    
+    
+})
 
+function fetchUser(){
+    return fetch("https://randomuser.me/api/")
+    .then(res => {
+        if(!res) throw new Error("=> Fetching Error!")
+        return res.json()
+    }).catch(err => console.log(err))
+}
+function randomUser(){
+
+    fetchUser().then(data =>{
+            const info = data.results[0];
+        console.log(info)
+        const nom = info.name.first
+        const email = info.email
+        const country = info.location.country
+        const city = info.location.city
+        const street = info.location.street.name
+        const phone = info.phone
+    
+        form.querySelector("#nom").value = nom;
+        form.querySelector("#email").value = email;
+        form.querySelector("#address").value = `${country} - ${city} - ${street}`;
+        form.querySelector("#tel").value = phone
+    })
+}
