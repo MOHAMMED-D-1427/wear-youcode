@@ -146,6 +146,9 @@ document.addEventListener("click", (e)=>{
     }
 })
 
+// ===================
+const date = Date().split(" ")[3];
+document.querySelector("#date").textContent = date;
 
 validation()
 validation2()
