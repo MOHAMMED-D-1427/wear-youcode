@@ -7,15 +7,15 @@ const cartSpace = document.getElementById("cart-space");
 
 
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
-const products = JSON.parse(localStorage.getItem("products")) || [];
+let products = JSON.parse(localStorage.getItem("products")) || [];
 
 
 // ============================================
 const calculateTotalPrice = ()=>{
-    const priceTotal = cartData.reduce((sum, p)=>{
+    const priceTotal = cartData?.reduce((sum, p)=>{
         return sum + p.prix*p.qty
     }, 0);
-    prixTotalIcon.innerHTML = priceTotal.toFixed(2);
+    prixTotalIcon.innerHTML = priceTotal.toFixed(2) || 0.00;
 }
 function showProductsInCart(){
     cartData = JSON.parse(localStorage.getItem("cart"));
@@ -51,8 +51,9 @@ function showProductsInCart(){
                             <button class="dec bg-green-700 h-fit  px-2 my-1.5 inline  rounded cursor-pointer hover:bg-green-900 ">-</button>
                         </div>
 
-                    <button data-id="${p.id}" class="delete absolute top-2 right-2 cursor-pointer hover:text-red-700" title="Supprimer?">
-                        <i  class="fas fa-trash"></i>Delete</button>
+
+                    <button data-id="${p.id}" class="delete absolute z-10 top-2 right-2 cursor-pointer hover:text-red-700" title="Supprimer?">
+                    <i data-id="${p.id}" class="delete fas fa-trash relative -z-10"></i></button>
                 </div>
             </div>
     `
@@ -86,13 +87,14 @@ function dragDrop(){
 // ==========> Drop/move/copy the product to the CART
 
     document.addEventListener("drop", (e)=>{
-        cartData = JSON.parse(localStorage.getItem("cart")) || [];
-
+        
         const cartIcon = e.target.closest("#panier");
         if(!cartIcon || !dragged) return; // .. || empty
         
         e.preventDefault();
         // ==================================
+        cartData = JSON.parse(localStorage.getItem("cart")) || [];
+        products = JSON.parse(localStorage.getItem("products")) || [];
         
         const id = dragged.dataset.id;
         console.log("dragged: ", dragged);
@@ -102,7 +104,7 @@ function dragDrop(){
 
         if(!isInCart){ 
             const productInfo = products.find(p => p.id == id);
-            // console.warn("----> New cart");
+            // console.warn("----> New in cart");
             // console.log("> > > cartData b:", cartData)
             cartData.push({qty: 1, ...productInfo});
             // console.log("> > > cartData a:", cartData)
@@ -110,7 +112,7 @@ function dragDrop(){
             localStorage.setItem("cart", JSON.stringify(cartData));
         }else{
             // console.warn("----> In cart");
-            isInCart.qty++
+            isInCart.qty++  
             const updateCart = [...cartData.filter(p => p.id != id), isInCart];
             cartData = updateCart;
             localStorage.setItem("cart", JSON.stringify(updateCart));

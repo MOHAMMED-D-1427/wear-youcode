@@ -52,8 +52,8 @@ function showProductsInCart(){
                             <button class="dec bg-green-700 h-fit  px-2 my-1.5 inline  rounded cursor-pointer hover:bg-green-900 ">-</button>
                         </div>
 
-                    <button data-id="${p.id}" class="delete absolute top-2 right-2 cursor-pointer hover:text-red-700" title="Supprimer?">
-                        <i  class="fas fa-trash"></i>Delete</button>
+                    <button data-id="${p.id}" class="delete absolute z-10 top-2 right-2 cursor-pointer hover:text-red-700" title="Supprimer?">
+                        <i data-id="${p.id}" class="delete fas fa-trash relative -z-10"></i></button>
                 </div>
             </div>
     `
@@ -141,6 +141,7 @@ incDecQty()
 function deleteFromCart(){
     document.addEventListener('click', (e)=>{
         if(e.target.matches(".delete")){
+            console.log("Delete")
             const id = e.target.dataset.id;
             const updateCart = cartData.filter(p => p.id != id);
 
